@@ -24,6 +24,11 @@
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-dark);
+  background-image: url('/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
   color: var(--text-main);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
@@ -31,12 +36,12 @@ body {
   overflow-x: hidden;
 }
 
-/* Dynamic Background Blobs */
+/* Dynamic Background Blobs (Kept for extra glow over the image) */
 body::before, body::after {
   content: "";
   position: fixed;
   border-radius: 50%;
-  filter: blur(100px);
+  filter: blur(120px);
   z-index: -1;
   animation: float 15s infinite alternate ease-in-out;
 }
@@ -71,13 +76,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Glassmorphism Premium Card */
 .glass-card {
-  background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--glass-border);
+  background: rgba(15, 23, 42, 0.25);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 20px;
-  box-shadow: var(--glass-shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
   overflow: hidden;
   position: relative;
 }
