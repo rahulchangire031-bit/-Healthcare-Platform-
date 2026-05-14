@@ -28,7 +28,7 @@ const DoctorList = () => {
     e.preventDefault();
     try {
       await axios.post('/api/appointments', {
-        doctorId: selectedDoctor._id,
+        doctorId: selectedDoctor.id,
         ...bookingData
       });
       navigate('/dashboard');
@@ -60,9 +60,9 @@ const DoctorList = () => {
       <div className="dashboard-grid">
         {filteredDoctors.map(doctor => (
           <motion.div 
-            key={doctor._id} 
+            key={doctor.id} 
             className="glass-card" 
-            style={{ padding: '1.5rem', cursor: 'pointer', border: selectedDoctor?._id === doctor._id ? '2px solid var(--primary)' : '1px solid var(--glass-border)' }}
+            style={{ padding: '1.5rem', cursor: 'pointer', border: selectedDoctor?.id === doctor.id ? '2px solid var(--primary)' : '1px solid var(--glass-border)' }}
             whileHover={{ y: -5 }}
             onClick={() => setSelectedDoctor(doctor)}
           >

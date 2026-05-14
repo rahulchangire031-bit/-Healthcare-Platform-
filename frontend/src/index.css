@@ -23,12 +23,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--bg-dark);
-  background-image: url('/bg.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #064e3b 100%);
   color: var(--text-main);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
@@ -209,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Layout */
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
   animation: fadeIn 0.8s ease-out;
@@ -299,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .auth-card {
   width: 100%;
-  max-width: 480px;
+  max-width: 600px;
   padding: 3rem;
   animation: rotateIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Outlet, Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-import { Activity, LogOut, User as UserIcon } from 'lucide-react';
+import { Activity, LogOut, User as UserIcon, Book } from 'lucide-react';
 
 const Layout = () => {
   const { user, logout } = useContext(AuthContext);
@@ -18,8 +18,8 @@ const Layout = () => {
         <nav className="nav">
           <Link to="/" style={{ textDecoration: 'none' }}>
             <div className="logo">
-              <Activity size={32} color="#818CF8" />
-              <span>HealthSync</span>
+              <Book size={32} color="#10B981" />
+              <span style={{ color: '#10B981' }}>MediBook</span>
             </div>
           </Link>
 
